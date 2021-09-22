@@ -48,7 +48,7 @@ function calculateProfitLoss(initial,quantity,current) {
 function validate(initial,quantity,current) {
     if (initial < 0 && quantity < 0 && current < 0) {
         customAlert('Price and quantity cannot be negative!');
-    } else if(!initial || !quantity || !current) {
+    } else if(initial === "" || quantity === "" || current === "") {
         customAlert("Enter all the fields!");
         return false;
     } else if (initial < 0 || current < 0) {
