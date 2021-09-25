@@ -34,11 +34,11 @@ function customAlert(message) {
 function calculateProfitLoss(initial,quantity,current) {
     if(initial > current) {
         let loss = (initial-current) * quantity;
-        let lossPercentage = (loss/initial) * 100;
+        let lossPercentage = (loss/(initial*quantity)) * 100;
         return ['Loss',loss,lossPercentage];
     } else if (initial <current) {
         let profit = (current - initial) * quantity;
-        let profitPercentage = (profit/initial) * 100;
+        let profitPercentage = (profit/(initial * quantity)) * 100;
         return ['Profit',profit,profitPercentage];
     } else {
         return ['profit',0,0];
